@@ -2,6 +2,9 @@
 
 > Paper under review. Full technical details will be released upon acceptance.The current version is only the pfds version, serving as a preliminary test version. Its overall performance remains competitive.
 
+<img width="446" height="443" alt="image" src="https://github.com/user-attachments/assets/30ff2739-546c-4f99-bda3-1207c1ac34be" />
+
+
 ## Overview
 
 A dual-branch multimodal anomaly detection framework for industrial 
