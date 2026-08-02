@@ -1,20 +1,4 @@
-"""
-easynet_pfdt_fusion_fixed.py
-Potential-Field Delta-t Modulated Mamba Decoder — Bi-modal Fusion Version
 
-Changes over single-modal version:
-  AdaptiveBiModalFusion replaces the original scalar depth_gate parameter.
-  The original fixed scalar suppressed depth features unilaterally;
-  the new module lets the network automatically decide weights for both
-  modalities based on input feature quality. Softmax enforces complementarity
-  (rgb_w + dep_w = 1), preventing both branches from collapsing to 0 or 1.
-
-Design notes:
-  - out_proj zero-initialized; restored after any apply(init_weight) call
-  - mamba_gate uses descending init values (0.55 / 0.40) per decoder stage
-  - mlp3 input dim stays hidden_size * 4; trainer requires no changes
-  - forward() supports both two-argument (rgb, depth) and single 6-ch tensor
-"""
 
 import math
 import numpy as np
