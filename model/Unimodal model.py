@@ -2,16 +2,7 @@
 easynet_pfdt.py
 Potential-Field Delta-t Modulated Mamba Decoder for Anomaly Detection
 
-Key contributions:
-1. Scan path: reuses HSCANS (serpentine/Hilbert/ZOrder fixed paths)
-   - Fixed paths preserve full spatial locality
-2. Potential-field Dt modulation: PotentialFieldScanner generates a
-   potential map that directly modulates the SSM Dt parameter
-   - High-potential regions (defects) -> large Dt -> absorb more features
-   - Low-potential regions (background) -> small Dt -> fast pass-through
-   - Fully differentiable, compatible with Mamba math
-3. Decoder resolution strategy: 32/64/128 use CNN+Mamba, 256 pure CNN
-"""
+
 
 import math
 import numpy as np
